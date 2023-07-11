@@ -1,12 +1,23 @@
 
 f = open("elprofeejevi.txt", "r") #TODO: Ususalmente se deja en "r" para no modificar la base de datos
+#next(f)
 sum = 0
-for line in f:
-    if line == "pop2022\n":
-        print("na, valol")
-    else:
-        sum = sum + float(line)
+is_float_found = False
 
-#avr = sum/198
-print(sum)
-print(type(f))
+def is_float(string):
+    string = string.replace("\n", "")
+    if string.replace(".", "").isnumeric():
+        return True
+    else:
+        return False
+
+with open("elprofeejevi.txt", "r") as f:
+    for line in f:
+        if is_float(line):
+            sum += float(line)
+            is_float_found = True
+
+if is_float_found:
+    print(sum)
+else:
+    print("No se encontraron números válidos en el archivo.")
