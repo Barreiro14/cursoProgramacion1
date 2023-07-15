@@ -2,6 +2,7 @@
 
 m="$1"
 
+
 str1="iq"
 str2="rank"
 str3="country"

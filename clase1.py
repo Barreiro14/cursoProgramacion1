@@ -2,7 +2,7 @@ f = open("elprofeejevi.txt", "r") #TODO: Ususalmente se deja en "r" para no modi
 #next(f)
 sum = 0
 def is_float(string):
-    string.replace("\n","")
+    string = string.replace("\n","")
     if string.replace(".", "").isnumeric():
         return True
     else:
