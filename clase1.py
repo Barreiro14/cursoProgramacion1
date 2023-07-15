@@ -1,5 +1,5 @@
 
-f = open("elprofeejevi.txt", "r") #TODO: Ususalmente se deja en "r" para no modificar la base de datos
+f = open("archivo.txt", "r") #TODO: Ususalmente se deja en "r" para no modificar la base de datos
 #next(f)
 sum = 0
 def is_float(string):
