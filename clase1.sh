@@ -1,29 +1,29 @@
 #!/bin/bash
 
-m="$1"
+file="$1"
 
-str1="iq"
-str2="rank"
-str3="country"
-str4="pop2022"
+arg="$2"
+
+str1="arg1"
+str2="arg2"
+str3="arg3"
+str4="arg4"
 
 test(){
     sum=0
-    touch elprofeejevi.txt
-    #echo "$m"
-    tr -d '"' < iqporpaises.csv > iqporpaises2.csv
-    while IFS=, read rank country iq pop2022; do
-        if [[ "$m" = "$str1" ]]; then
-            echo "$iq" >> elprofeejevi.txt
-        elif [[ "$m" = "$str2" ]]; then
-            echo "$rank" >> elprofeejevi.txt
-        elif [[ "$m" = "$str3" ]]; then
-            echo "$country" >> elprofeejevi.txt
-        else [[ "$m" = "$str4" ]]; 
-            echo "$pop2022" >> elprofeejevi.txt
+    touch archivo.txt
+    tr -d '"' < $file > output.csv
+    while IFS=, read arg1 arg2 arg3 arg4; do
+        if [[ "$arg" = "$str1" ]]; then
+            echo "$arg1" >> archivo.txt
+        elif [[ "$arg" = "$str2" ]]; then
+            echo "$arg2" >> archivo.txt
+        elif [[ "$arg" = "$str3" ]]; then
+            echo "$arg3" >> archivo.txt
+        else [[ "$arg" = "$str4" ]]; 
+            echo "arg4" >> archivo.txt
         fi
-    done < "iqporpaises2.csv" 
-    #echo "test"
+    done < "output.csv" 
 }
 
 test
