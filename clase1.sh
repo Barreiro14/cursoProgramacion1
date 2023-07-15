@@ -9,7 +9,7 @@ str2="arg2"
 str3="arg3"
 str4="arg4"
 
-test(){
+test (){
     sum=0
     touch archivo.txt
     tr -d '"' < $file > output.csv
